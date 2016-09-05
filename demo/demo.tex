@@ -1,0 +1,61 @@
+%!TEX TS-program = XeLaTeX
+\documentclass[xetex,12pt,aspectratio=169]{beamer}
+\usepackage{fontspec}
+\defaultfontfeatures[\ttfamily]{Mapping=} % stop XeTex messing with quotes in code, etc.
+
+\usetheme{monokai}
+%\usetheme{monokaimuted}
+
+\usepackage{minted}
+\usemintedstyle{monokai}
+
+\title{Monokai}
+\subtitle{A hacker's beamer theme}
+\date{\today}
+\author{Toby Fleming}
+\institute{School of Hard Knocks}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Table of contents}
+\tableofcontents
+\end{frame}
+
+\section{Demo}
+\subsection{Lists}
+
+\begin{frame}{Lists}
+XeTeX \alert{highly} recommended. Some good fonts for this theme:
+\vfill
+\begin{itemize}
+\item Source Serif Pro, Source Sans Pro and Source Code Pro
+\item \texttt{Anonymous Pro}
+\item Open Sans
+\end{itemize}
+\end{frame}
+
+\subsection{Blocks}
+
+\begin{frame}{Blocks}
+\begin{block}{block}block\end{block}
+\begin{exampleblock}{exampleblock}exampleblock\end{exampleblock}
+\begin{alertblock}{alertblock}alertblock\end{alertblock}
+\end{frame}
+
+\subsection{Code}
+
+\begin{frame}[fragile]{Code}
+\begin{minted}{Python}
+from __future__ import print_function, unicode_literals
+
+def main():
+    print('Hello world')
+
+if __name__ == '__main__':
+    main()
+\end{minted}
+\end{frame}
+
+\end{document}

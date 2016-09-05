@@ -1,0 +1,19 @@
+% Copyright 2016 Toby Fleming
+% Much of this file is based on Till Tantau's beamer templates, hence they
+% may be distributed and/or modified under the GNU Public License v3.
+
+\newif\ifbeamer@shownav
+\beamer@shownavfalse
+\DeclareOptionBeamer{shownav}{\beamer@shownavtrue}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+\usecolortheme{monokaicolorful}
+\usefonttheme{monokai}
+
+\ifbeamer@shownav\else
+\setbeamertemplate{navigation symbols}{}
+\fi
+
+\mode<all>
